@@ -61,6 +61,12 @@
   border-color: var(--color-primary-400);
 }
 
+.form-group input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: var(--color-gray-400);
+}
+
 .error-message {
   color: var(--color-danger-500);
   font-size: var(--font-size-sm);
@@ -86,10 +92,16 @@
   box-shadow: var(--shadow-primary);
 }
 
-.login-button:hover {
+.login-button:hover:not(:disabled) {
   transform: translateY(-2px);
   box-shadow: var(--shadow-primary-hover);
   background: var(--bg-gradient-button-hover);
+}
+
+.login-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
 }
 
 .login-button:active {
