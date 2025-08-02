@@ -17,6 +17,11 @@
   max-width: 800px;
   position: relative;
   overflow: hidden;
+  min-height: calc(100vh - 100px);
+}
+
+.main-content {
+  padding-top: var(--space-6);
 }
 
 .App::before {

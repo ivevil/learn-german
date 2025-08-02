@@ -10,7 +10,7 @@ const openai = new OpenAI({
   dangerouslyAllowBrowser: true,
 });
 
-const VoiceChat = () => {
+const VoiceChat = ({ username }) => {
   const [transcript, setTranscript] = useState('');
   const [response, setResponse] = useState('');
   const [isListening, setIsListening] = useState(false);
@@ -171,6 +171,7 @@ const VoiceChat = () => {
           response={response}
           isLoading={isLoading}
           isSpeaking={isSpeaking}
+          username={username}
         />
         
         <div className="controls">

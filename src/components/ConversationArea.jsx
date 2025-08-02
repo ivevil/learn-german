@@ -1,13 +1,13 @@
 import React from 'react';
 
-const ConversationArea = ({ transcript, response, isLoading, isSpeaking }) => {
+const ConversationArea = ({ transcript, response, isLoading, isSpeaking, username }) => {
   return (
     <div className="conversation-area">
       {transcript && (
         <div className="message user-message">
           <div className="message-header">
             <span className="user-icon">👤</span>
-            <span className="user-label">Du</span>
+            <span className="user-label">{username}</span>
           </div>
           <div className="message-content">{transcript}</div>
         </div>
